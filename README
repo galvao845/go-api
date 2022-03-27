@@ -1,0 +1,24 @@
+#Autor do Projeto
+- João Victor Fonte boa
+
+# Projeto de Backend em GO
+- ideia desse projeto foi criar um backend em forma de api para manipulação de dados, tanto de api, quanto no banco de dados postgre.
+
+# script de criação do banco 
+-- SCHEMA: public
+
+-- DROP SCHEMA IF EXISTS public ;
+
+CREATE SCHEMA IF NOT EXISTS public
+    AUTHORIZATION go;
+
+COMMENT ON SCHEMA public
+    IS 'standard public schema';
+
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+GRANT ALL ON SCHEMA public TO go;
+
+DROP TABLE IF EXISTS ADVICE_TABLE;
+
+CREATE TABLE IF NOT EXISTS ADVICE_TABLE (ID SERIAL PRIMARY KEY NOT NULL,DATA_ADVICE VARCHAR(500) NOT NULL);
